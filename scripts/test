@@ -163,7 +163,7 @@ ensure_opsfiles_in_tests() {
       #   A line starting with 'pass "'
       #   AND
       #   Followed by "$basename"
-      if [ $(grep -E "(check_interpolation\s+\"(name:\s+)?|pass\s+\")($basename)" $test -c) != "0" ]; then
+      if [ $(grep -E "((check_interpolation|check_latest)\s+\"(name:\s+)?|pass\s+\")($basename)" $test -c) != "0" ]; then
         pass "$x is tested in $test"
       else
         fail "$x is ${RED}NOT${NOCOLOR} tested in $test"
