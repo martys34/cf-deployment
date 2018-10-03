@@ -43,7 +43,7 @@
 - type: replace
   path: "/instance_groups/-"
   value:
-    name: isolated_scheduler
+    name: isolated-scheduler
     azs:
     - z1
     - z2
