@@ -18,13 +18,13 @@
   value: 7a573c58f9d878c5068a951c1d73f3e7647daf10
 - type: replace
   path: /releases/name=binary-buildpack/url
-  value: https://storage.googleapis.com/cf-deployment-compiled-releases/binary-buildpack-1.0.27-ubuntu-xenial-97.19-20181002-231439-576050092.tgz
+  value: https://storage.googleapis.com/cf-deployment-compiled-releases/binary-buildpack-1.0.27-ubuntu-xenial-97.22-20181005-002131-848419697.tgz
 - type: replace
   path: /releases/name=binary-buildpack/version
   value: 1.0.27
 - type: replace
   path: /releases/name=binary-buildpack/sha1
-  value: c0d0aae3e8623d96312f447caaef0128c44cda0c
+  value: a48b5e612dd1b2bc1e9d09f1d6d32f8be6640cde
 - type: replace
   path: /releases/name=cf-networking/url
   value: https://storage.googleapis.com/cf-deployment-compiled-releases/cf-networking-2.16.0-ubuntu-xenial-97.19-20181002-231621-228997599.tgz
@@ -242,7 +242,7 @@
   path: /releases/name=binary-buildpack/stemcell?
   value:
     os: ubuntu-xenial
-    version: "97.19"
+    version: "97.22"
 - type: replace
   path: /releases/name=cf-networking/stemcell?
   value:
