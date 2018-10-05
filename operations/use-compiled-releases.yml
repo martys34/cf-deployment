@@ -72,13 +72,13 @@
   value: 1bf859446fb9769d35efbdddbab929d99d7f8331
 - type: replace
   path: /releases/name=cflinuxfs2/url
-  value: https://storage.googleapis.com/cf-deployment-compiled-releases/cflinuxfs2-1.239.0-ubuntu-xenial-97.19-20181004-161801-457342752.tgz
+  value: https://storage.googleapis.com/cf-deployment-compiled-releases/cflinuxfs2-1.240.0-ubuntu-xenial-97.22-20181005-221703-502050483.tgz
 - type: replace
   path: /releases/name=cflinuxfs2/version
-  value: 1.239.0
+  value: 1.240.0
 - type: replace
   path: /releases/name=cflinuxfs2/sha1
-  value: cc448499b1447f4280ba6a842adec96b6b2f987c
+  value: 59ab13ee44aa51b9d5b5d7dc3e8fde1db9fa220e
 - type: replace
   path: /releases/name=garden-runc/url
   value: https://storage.googleapis.com/cf-deployment-compiled-releases/garden-runc-1.16.6-ubuntu-xenial-97.19-20181002-232042-769089738.tgz
@@ -262,7 +262,7 @@
   path: /releases/name=cflinuxfs2/stemcell?
   value:
     os: ubuntu-xenial
-    version: "97.19"
+    version: "97.22"
 - type: replace
   path: /releases/name=diego/stemcell?
   value:
