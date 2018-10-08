@@ -78,3 +78,9 @@ cf-deployment/cf-deployment.yml \
 -o cf-deployment/operations/bosh-lite.yml \
 -v system_domain=<SYSTEM_DOMAIN>
 ```
+
+# Troubleshooting
+
+## Issue with a name server
+
+In case of issues with api endpoint name resolution with GCP deployment, check if your domain zone pointed to the right load balancer. `dig api.mydomain.cf.com` should show correct *A* record.
