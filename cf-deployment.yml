@@ -872,6 +872,7 @@ instance_groups:
     properties:
       uaa_client_secret: ((uaa_clients_network_policy_secret))
       uaa_ca: ((uaa_ca.certificate))
+      enable_space_developer_self_service: true
       database:
         type: mysql
         username: network_policy
@@ -1097,7 +1098,6 @@ instance_groups:
             ca_cert: "((service_cf_internal_ca.certificate))"
             client_cert: "((cc_bridge_tps.certificate))"
             client_key: "((cc_bridge_tps.private_key))"
-          listener_enabled: false
   - name: ssh_proxy
     release: diego
     properties:
@@ -2016,9 +2016,9 @@ releases:
   version: 1.0.27
   sha1: f0022e0632d31d5bbb0e0a5e424244bad83158a1
 - name: bpm
-  url: https://bosh.io/d/github.com/cloudfoundry-incubator/bpm-release?v=0.12.3
-  version: 0.12.3
-  sha1: 313664d2e6d8485ffa0683979a401f7722f63a50
+  url: https://bosh.io/d/github.com/cloudfoundry-incubator/bpm-release?v=0.13.0
+  version: 0.13.0
+  sha1: 4b6ebfdaa467c04855528172b099e565d679e0f5
 - name: capi
   url: https://bosh.io/d/github.com/cloudfoundry/capi-release?v=1.70.0
   version: 1.70.0
@@ -2028,9 +2028,9 @@ releases:
   version: 36.15.0
   sha1: 0764d9d6aae7cefd10019437ed83e7715e614633
 - name: cf-networking
-  url: https://bosh.io/d/github.com/cloudfoundry/cf-networking-release?v=2.16.0
-  version: 2.16.0
-  sha1: 9f34333f6a41c66b39fdde1971b03ed466a248d3
+  url: https://bosh.io/d/github.com/cloudfoundry/cf-networking-release?v=2.17.0
+  version: 2.17.0
+  sha1: 0088d75912db87c28084347dc488370a9aa9fad0
 - name: cf-smoke-tests
   url: https://bosh.io/d/github.com/cloudfoundry/cf-smoke-tests-release?v=40.0.9
   version: 40.0.9
@@ -2040,17 +2040,17 @@ releases:
   version: "7.1"
   sha1: 7e9648f44c6513ea5cb84531c9c5d1ae0730f202
 - name: cflinuxfs2
-  url: https://bosh.io/d/github.com/cloudfoundry/cflinuxfs2-release?v=1.241.0
-  version: 1.241.0
-  sha1: adce7383e1eb8d60351c1204d0d947a235893c39
+  url: https://bosh.io/d/github.com/cloudfoundry/cflinuxfs2-release?v=1.242.0
+  version: 1.242.0
+  sha1: 99821c729c05646c203a684a15a0971a5af08e35
 - name: credhub
   url: https://bosh.io/d/github.com/pivotal-cf/credhub-release?v=2.0.3
   version: 2.0.3
   sha1: 42ca975446280f0915462be6a59a17ba4afca389
 - name: diego
-  url: https://bosh.io/d/github.com/cloudfoundry/diego-release?v=2.18.0
-  version: 2.18.0
-  sha1: 3e93b8a9f850fc3e5b77e2c9869f27d2c6d2b32c
+  url: https://bosh.io/d/github.com/cloudfoundry/diego-release?v=2.19.0
+  version: 2.19.0
+  sha1: d71a7977786c8266ab5e31a13366d5b949a24f09
 - name: dotnet-core-buildpack
   url: https://bosh.io/d/github.com/cloudfoundry/dotnet-core-buildpack-release?v=2.1.5
   version: 2.1.5
@@ -2096,9 +2096,9 @@ releases:
   version: 1.7.23
   sha1: 6c413b233bb6ecdcd4f52f1b7ac96e2493812b34
 - name: silk
-  url: https://bosh.io/d/github.com/cloudfoundry/silk-release?v=2.16.0
-  version: 2.16.0
-  sha1: 022d325d412c6af04c426a5c9f8f69556d38a291
+  url: https://bosh.io/d/github.com/cloudfoundry/silk-release?v=2.17.0
+  version: 2.17.0
+  sha1: 752a269d854ca3840b1ec5f6d664efb3901e73e5
 - name: staticfile-buildpack
   url: https://bosh.io/d/github.com/cloudfoundry/staticfile-buildpack-release?v=1.4.32
   version: 1.4.32

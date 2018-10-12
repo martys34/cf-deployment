@@ -27,13 +27,13 @@
   value: 7cedd9bfa295ad57de6f675d55e2e41174472ead
 - type: replace
   path: /releases/name=cf-networking/url
-  value: https://storage.googleapis.com/cf-deployment-compiled-releases/cf-networking-2.16.0-ubuntu-xenial-97.18-20181006-041151-847610848.tgz
+  value: https://storage.googleapis.com/cf-deployment-compiled-releases/cf-networking-2.17.0-ubuntu-xenial-97.18-20181009-213917-463001272.tgz
 - type: replace
   path: /releases/name=cf-networking/version
-  value: 2.16.0
+  value: 2.17.0
 - type: replace
   path: /releases/name=cf-networking/sha1
-  value: 72b95570b68b37f742a55e47f627496c720d5489
+  value: b090005cac6742eae391b9ca32f7ed77ed052cab
 - type: replace
   path: /releases/name=uaa/url
   value: https://storage.googleapis.com/cf-deployment-compiled-releases/uaa-62.0-ubuntu-xenial-97.18-20181006-041045-231679179.tgz
@@ -54,13 +54,13 @@
   value: 5d072b40b88768fb33f35c2ec1bc76d5e392ba4b
 - type: replace
   path: /releases/name=diego/url
-  value: https://storage.googleapis.com/cf-deployment-compiled-releases/diego-2.18.0-ubuntu-xenial-97.18-20181006-041151-583523029.tgz
+  value: https://storage.googleapis.com/cf-deployment-compiled-releases/diego-2.19.0-ubuntu-xenial-97.18-20181011-203034-570497671.tgz
 - type: replace
   path: /releases/name=diego/version
-  value: 2.18.0
+  value: 2.19.0
 - type: replace
   path: /releases/name=diego/sha1
-  value: 5f48872574362d3eb8663b5fca1e4d5da7233476
+  value: d900f254abf10a20b71cb2c261e652366d5c7ccc
 - type: replace
   path: /releases/name=routing/url
   value: https://storage.googleapis.com/cf-deployment-compiled-releases/routing-0.182.0-ubuntu-xenial-97.18-20181006-041151-848003156.tgz
@@ -72,13 +72,13 @@
   value: ef92f6630f352ed339b76204ad0603627207cd9e
 - type: replace
   path: /releases/name=cflinuxfs2/url
-  value: https://storage.googleapis.com/cf-deployment-compiled-releases/cflinuxfs2-1.241.0-ubuntu-xenial-97.18-20181008-171929-138045735.tgz
+  value: https://storage.googleapis.com/cf-deployment-compiled-releases/cflinuxfs2-1.242.0-ubuntu-xenial-97.18-20181012-051049-868180075.tgz
 - type: replace
   path: /releases/name=cflinuxfs2/version
-  value: 1.241.0
+  value: 1.242.0
 - type: replace
   path: /releases/name=cflinuxfs2/sha1
-  value: 323ed843c9c6a42d7f96e87fc424d7b946ee0314
+  value: 449262f1ecc4b8505c0ca8d23051c2f1e1d8b73e
 - type: replace
   path: /releases/name=garden-runc/url
   value: https://storage.googleapis.com/cf-deployment-compiled-releases/garden-runc-1.16.6-ubuntu-xenial-97.18-20181006-041151-583840199.tgz
@@ -198,13 +198,13 @@
   value: c53804d674e0cb56b86d376ba2969f7dc3cc1977
 - type: replace
   path: /releases/name=bpm/url
-  value: https://storage.googleapis.com/cf-deployment-compiled-releases/bpm-0.12.3-ubuntu-xenial-97.18-20181006-041045-232258419.tgz
+  value: https://storage.googleapis.com/cf-deployment-compiled-releases/bpm-0.13.0-ubuntu-xenial-97.18-20181012-165243-369160554.tgz
 - type: replace
   path: /releases/name=bpm/version
-  value: 0.12.3
+  value: 0.13.0
 - type: replace
   path: /releases/name=bpm/sha1
-  value: 3221ff928ad3dae51ab4f8cc06fb75ac7bc23265
+  value: b6c8d4f6eb5aa43d5de4fb8b24dbcc8ca436fdf0
 - type: replace
   path: /releases/name=loggregator-agent/url
   value: https://storage.googleapis.com/cf-deployment-compiled-releases/loggregator-agent-2.3-ubuntu-xenial-97.18-20181006-041045-192163961.tgz
@@ -216,13 +216,13 @@
   value: 8dc5d084f00c4f8bbcdb861cb9ee56033dd19f60
 - type: replace
   path: /releases/name=silk/url
-  value: https://storage.googleapis.com/cf-deployment-compiled-releases/silk-2.16.0-ubuntu-xenial-97.18-20181006-041151-846970478.tgz
+  value: https://storage.googleapis.com/cf-deployment-compiled-releases/silk-2.17.0-ubuntu-xenial-97.18-20181009-234019-107971682.tgz
 - type: replace
   path: /releases/name=silk/version
-  value: 2.16.0
+  value: 2.17.0
 - type: replace
   path: /releases/name=silk/sha1
-  value: 641aac45e81e5da4aa02356e93c3b22b2a123859
+  value: 9dcc027af2435929da6ac1a03be6673a6bf39466
 - type: replace
   path: /releases/name=bpm/stemcell?
   value:
@@ -373,10 +373,10 @@
   value: 8609dc7f166e2c3a0b75487adbc1c1e4b1307c5e
 - type: replace
   path: /releases/name=credhub/url
-  value: https://storage.googleapis.com/cf-deployment-compiled-releases/credhub-2.0.3-ubuntu-xenial-97.18-20181008-171139-471048508.tgz
+  value: https://storage.googleapis.com/cf-deployment-compiled-releases/credhub-2.0.3-ubuntu-xenial-97.18-20181011-222847-808907382.tgz
 - type: replace
   path: /releases/name=credhub/sha1
-  value: b900f46604876b9428ed63788f6d76bab61e8152
+  value: 76f4936c7653862dd7fabee702a1d43c7f8c2554
 - type: replace
   path: /releases/name=credhub/version
   value: 2.0.3
