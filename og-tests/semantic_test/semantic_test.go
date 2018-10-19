@@ -8,6 +8,7 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/sergi/go-diff/diffmatchpatch"
 	"gopkg.in/yaml.v2"
 )
 
@@ -170,6 +171,56 @@ func TestSemantic(t *testing.T) {
 			t.Errorf("use-trusted-ca-cert-for-apps.yml overwrites existing trusted CAs from cf-deployment.yml.\nTrusted CAs before applying the ops file:\n\n%s\n\nTrusted CAs after applying the ops file:\n\n%s", existingCA, newCA)
 		}
 	})
+
+	t.Run("add-persistent-isolation-segment-diego-cell.yml", func(t *testing.T) {
+
+		diegoCellRepProperties, err := helpers.BoshInterpolate(
+			operationsSubDirectory,
+			manifestPath,
+			"",
+			"--path", "/instance_groups/name=diego-cell/jobs/name=rep/properties",
+		)
+
+		if err != nil {
+			t.Errorf("bosh interpolate error: %v", err)
+		}
+
+		isoSegDiegoCellRepProperties, err := helpers.BoshInterpolate(
+			operationsSubDirectory,
+			manifestPath,
+			"",
+			"--path", "/instance_groups/name=isolated-diego-cell/jobs/name=rep/properties",
+			"-o", "test/add-persistent-isolation-segment-diego-cell.yml",
+		)
+
+		if err != nil {
+			t.Errorf("bosh interpolate error: %v", err)
+		}
+
+		dmp := diffmatchpatch.New()
+
+		diffs := dmp.DiffMain(
+			string(diegoCellRepProperties),
+			string(isoSegDiegoCellRepProperties),
+			false,
+		)
+
+		fmt.Println(dmp.DiffPrettyText(diffs))
+
+		// local iso_seg_diego_cell_rep_properties=$(bosh int cf-deployment.yml -o operations/test/add-persistent-isolation-segment-diego-cell.yml \
+		//   --path /instance_groups/name=isolated-diego-cell/jobs/name=rep/properties
+		// | grep -v placement_tags | grep -v persistent_isolation_segment)
+
+		//   diff <(echo "$diego_cell_rep_properties") <(echo "$iso_seg_diego_cell_rep_properties")
+		//   local rep_diff_exit_code=$?
+
+		// if [[ $rep_diff_exit_code != 0 ]]; then
+		//   fail "rep properties on diego-cell have diverged between cf-deployment.yml and test/add-persistent-isolation-segment-diego-cell.yml"
+		// else
+		//   pass "test/add-persistent-isolation-segment-diego-cell.yml is consistent with cf-deployment.yml"
+
+	})
+
 }
 
 func formatCAs(existingRaw, newRaw []byte) (string, string) {
