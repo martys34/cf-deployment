@@ -14,6 +14,8 @@ test_experimental_ops() {
       check_interpolation "name: bits-service-s3.yml" "${home}/operations/use-external-blobstore.yml" "-o ${home}/operations/use-s3-blobstore.yml" "-o bits-service.yml" "-o bits-service-s3.yml" "-l ${home}/operations/example-vars-files/vars-use-s3-blobstore.yml"
       check_interpolation "name: bits-service-webdav.yml" "bits-service.yml" "-o bits-service-webdav.yml"
 
+      check_interpolation "deploy-forwarder-agent.yml" "-v system_domain=something"
+
       check_interpolation "disable-consul.yml"
       check_interpolation "name: disable-consul-bosh-lite.yml" "disable-consul.yml" "-o ${home}/operations/bosh-lite.yml" "-o disable-consul-bosh-lite.yml"
       check_interpolation "name: disable-consul-windows.yml" "${home}/operations/windows2012R2-cell.yml" "-o disable-consul.yml" "-o disable-consul-windows.yml"
